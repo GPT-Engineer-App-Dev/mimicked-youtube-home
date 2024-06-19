@@ -1,19 +1,22 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Box, Flex, Image, Link, Spacer, HStack, IconButton } from "@chakra-ui/react";
+import { FaHome, FaFire, FaRegCompass, FaRegBell } from "react-icons/fa";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
-      </VStack>
-    </Container>
+    <Box>
+      <Flex as="nav" bg="red.600" color="white" padding="4">
+        <Link href="/">
+          <Image src="/youtube-logo.svg" alt="YouTube Logo" boxSize="40px" />
+        </Link>
+        <Spacer />
+        <HStack spacing="24px">
+          <IconButton aria-label="Home" icon={<FaHome />} />
+          <IconButton aria-label="Trending" icon={<FaFire />} />
+          <IconButton aria-label="Explore" icon={<FaRegCompass />} />
+          <IconButton aria-label="Notifications" icon={<FaRegBell />} />
+        </HStack>
+      </Flex>
+    </Box>
   );
 };
 
